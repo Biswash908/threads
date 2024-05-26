@@ -1,8 +1,8 @@
 import styles from "./trending-topics-container.module.css";
 
-const TrendingTopicsContainer = ({ className = "" }) => {
+const TrendingTopicsContainer = () => {
   return (
-    <div className={[styles.infos, className].join(" ")}>
+    <div className={styles.infos}>
       <div className={styles.infos1}>
         <div className={styles.title}>
           <h2 className={styles.trendingTopics}>Trending Topics</h2>
@@ -15,9 +15,9 @@ const TrendingTopicsContainer = ({ className = "" }) => {
           <div className={styles.threadsdesktop}>ThreadsDesktop</div>
           <div className={styles.kThreads}>123.9k threads</div>
         </div>
-        <div className={styles.topic}>
+        <div className={styles.topic1}>
           <div className={styles.design}>movies and series</div>
-          <div className={styles.threadsdesktop}>
+          <div className={styles.spiderManAcrossThe}>
             Spider-Man: Across the Spider-Verse
           </div>
           <div className={styles.kThreads}>93.4k threads</div>
@@ -41,10 +41,6 @@ const TrendingTopicsContainer = ({ className = "" }) => {
       <div className={styles.seeMore}>see more</div>
     </div>
   );
-};
-
-TrendingTopicsContainer.propTypes = {
-  className: PropTypes.string,
 };
 
 export default TrendingTopicsContainer;

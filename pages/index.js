@@ -1,7 +1,7 @@
-import Navbar from "../components/Navbar/navbar";
-import UserInfo from "../components/user-info";
-import AuraFeedContainer from "../components/Feed/aura-feed-container";
-import TrendingTopicsContainer from "../components/Trending/trending-topics-container";
+import Navbar from "../components/navbar/navbar";
+import UserInfo from "../components/userinfocol/user-info";
+import AuraFeedContainer from "../components/feed/aura-feed-container";
+import TrendingTopicsContainer from "../components/trending/trending-topics-container";
 import styles from "./index.module.css";
 
 const Content = () => {

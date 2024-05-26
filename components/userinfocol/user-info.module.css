@@ -100,7 +100,7 @@
   color: var(--text-color-alt);
 }
 .userinfo {
-  width: 342px;
+  width: 316px;
   height: 1232px;
   flex-direction: column;
   align-items: flex-start;

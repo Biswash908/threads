@@ -72,6 +72,10 @@
   gap: var(--gap-7xs);
 }
 .likeIcon {
+  object-fit: cover;
+}
+.likeIcon,
+.sendIcon {
   width: 24px;
   position: relative;
   height: 24px;

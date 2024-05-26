@@ -1,18 +1,35 @@
+import { useMemo } from "react";
 import styles from "./thread.module.css";
 
-const Thread = ({
-  className = "",
+const Thread1 = ({
+  authorImage,
   threadContent,
+  like,
+  comment,
+  repost,
   likes,
-  avatar,
+  avatarIconHeight,
+  likesWidth,
   username,
   timeSpentSincePublish,
 }) => {
+  const threadStyle = useMemo(() => {
+    return {
+      height: avatarIconHeight,
+    };
+  }, [avatarIconHeight]);
+
+  const reactionsStyle = useMemo(() => {
+    return {
+      width: likesWidth,
+    };
+  }, [likesWidth]);
+
   return (
-    <div className={[styles.thread, className].join(" ")}>
+    <div className={styles.thread}>
       <div className={styles.thread1}>
-        <div className={styles.thread2}>
-          <img className={styles.avatarIcon} alt="" src={avatar} />
+        <div className={styles.thread2} style={threadStyle}>
+          <img className={styles.avatarIcon} alt="" src={authorImage} />
         </div>
         <div className={styles.infosActions}>
           <div className={styles.info}>
@@ -30,12 +47,12 @@ const Thread = ({
             <div className={styles.iveBeenExploring}>{threadContent}</div>
           </div>
           <div className={styles.actions}>
-            <img className={styles.likeIcon} alt="" src="/like.svg" />
-            <img className={styles.likeIcon} alt="" src="/comment.svg" />
-            <img className={styles.likeIcon} alt="" src="/repost.svg" />
-            <img className={styles.likeIcon} alt="" src="/send1.svg" />
+            <img className={styles.likeIcon} alt="" src={like} />
+            <img className={styles.likeIcon} alt="" src={comment} />
+            <img className={styles.likeIcon} alt="" src={repost} />
+            <img className={styles.sendIcon} alt="" src="/send-1.svg" />
           </div>
-          <div className={styles.reactions}>
+          <div className={styles.reactions} style={reactionsStyle}>
             <div className={styles.likes}>{likes}</div>
           </div>
         </div>
@@ -44,13 +61,4 @@ const Thread = ({
   );
 };
 
-Thread.propTypes = {
-  className: PropTypes.string,
-  threadContent: PropTypes.string,
-  likes: PropTypes.string,
-  avatar: PropTypes.string,
-  username: PropTypes.string,
-  timeSpentSincePublish: PropTypes.string,
-};
-
-export default Thread;
+export default Thread1;

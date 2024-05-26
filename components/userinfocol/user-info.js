@@ -1,10 +1,9 @@
-import AvatarBigIcon from "./avatar-big-icon";
-import PropTypes from "prop-types";
+import AvatarBigIcon from "../avatar-big-icon";
 import styles from "./user-info.module.css";
 
-const UserInfo = ({ className = "" }) => {
+const UserInfo = () => {
   return (
-    <div className={[styles.userinfo, className].join(" ")}>
+    <div className={styles.userinfo}>
       <div className={styles.infos}>
         <AvatarBigIcon
           avatarBigIconOverflow="unset"
@@ -37,10 +36,6 @@ const UserInfo = ({ className = "" }) => {
       </div>
     </div>
   );
-};
-
-UserInfo.propTypes = {
-  className: PropTypes.string,
 };
 
 export default UserInfo;

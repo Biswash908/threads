@@ -1,11 +1,7 @@
 import { useMemo } from "react";
 import styles from "./avatar-big-icon.module.css";
 
-const AvatarBigIcon = ({
-  className = "",
-  avatarBigIconOverflow,
-  avatarBigIconPosition,
-}) => {
+const AvatarBigIcon = ({ avatarBigIconOverflow, avatarBigIconPosition }) => {
   const avatarBigIconStyle = useMemo(() => {
     return {
       overflow: avatarBigIconOverflow,
@@ -15,20 +11,12 @@ const AvatarBigIcon = ({
 
   return (
     <img
-      className={[styles.avatarBigIcon, className].join(" ")}
+      className={styles.avatarBigIcon}
       alt=""
       src="/avatar-big.svg"
       style={avatarBigIconStyle}
     />
   );
-};
-
-AvatarBigIcon.propTypes = {
-  className: PropTypes.string,
-
-  /** Style props */
-  avatarBigIconOverflow: PropTypes.any,
-  avatarBigIconPosition: PropTypes.any,
 };
 
 export default AvatarBigIcon;

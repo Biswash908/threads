@@ -52,8 +52,7 @@
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.topic,
-.treanding {
+.topic {
   align-self: stretch;
   display: flex;
   flex-direction: column;
@@ -61,7 +60,31 @@
   justify-content: flex-start;
   gap: var(--gap-11xs);
 }
+.spiderManAcrossThe {
+  align-self: stretch;
+  position: relative;
+  font-size: var(--font-size-sm);
+  line-height: 19px;
+  font-weight: 500;
+  color: var(--text-color);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.topic1,
 .treanding {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.topic1 {
+  height: 61px;
+  gap: var(--gap-11xs);
+}
+.treanding {
+  flex: 1;
   gap: var(--gap-base);
   font-size: var(--font-size-xs);
   color: var(--text-color-alt);
@@ -77,8 +100,8 @@
   white-space: nowrap;
 }
 .infos {
-  width: 317px;
-  height: 1229px;
+  align-self: stretch;
+  width: 347px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;

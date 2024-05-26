@@ -1,8 +1,8 @@
-import styles from "./Navbar.module.css";
+import styles from "./navbar.module.css";
 
-const Navbar = ({ className = "" }) => {
+const Navbar = () => {
   return (
-    <header className={[styles.nav, className].join(" ")}>
+    <header className={styles.nav}>
       <div className={styles.logo}>
         <img
           className={styles.threadsLogoIcon}
@@ -19,10 +19,6 @@ const Navbar = ({ className = "" }) => {
       </div>
     </header>
   );
-};
-
-Navbar.propTypes = {
-  className: PropTypes.string,
 };
 
 export default Navbar;
