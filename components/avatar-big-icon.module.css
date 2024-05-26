@@ -1,0 +1,6 @@
+.avatarBigIcon {
+  width: 64px;
+  max-width: 100%;
+  overflow: hidden;
+  height: 64px;
+}
