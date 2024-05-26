@@ -1,4 +1,4 @@
-import Navbar from "../components/navbar/navbar";
+import Navbar from "../components/feed/navbar/navbar";
 import UserInfo from "../components/userinfocol/user-info";
 import AuraFeedContainer from "../components/feed/aura-feed-container";
 import TrendingTopicsContainer from "../components/trending/trending-topics-container";
